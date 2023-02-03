@@ -10,6 +10,9 @@ login terminal
 git config --global user.email "jasakuloapp@gmail.com"
 git config --global user.name "jasakulo"
 
+git config --global user.email "andiagus2507@gmail.com"
+git config --global user.name "toyacamel"
+
 JALANKAN TERMINAL
 
 npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
