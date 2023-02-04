@@ -1,678 +1,1561 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>M. Toyib Hidayat, S.Kom</title>
-    <link href="dist//css/final.css" rel="stylesheet">
+    <link href="dist//css/final.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="icon" type="image/png" sizes="32x32"  href="./dist/img/favicon.png">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./dist/img/favicon.png"
+    />
     <!-- Animate Style-->
     <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    
-<!-- Dark Mode -->
-    <script>if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-        document.documentElement.classList.add('dark')
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <!-- Dark Mode -->
+    <script>
+      if (
+        localStorage.theme === "dark" ||
+        (!("theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.classList.add("dark");
       } else {
-        document.documentElement.classList.remove('dark')
-      }</script>
-</head>
-<body>
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
+  </head>
+  <body>
     <!-- Header Start -->
-    <header class="bg-transparant absolute top-0 left-0 w-full 
-    flex-items-center z-10">
-    <div class="container">
-        <div class="flex items-center justify-between relative">
-            <div class="px-4">
+    <header
+      class="bg-transparant flex-items-center absolute top-0 left-0 z-10 w-full"
+    >
+      <div class="container">
+        <div class="relative flex items-center justify-between">
+          <div class="px-4">
+            <a
+              href="#Home"
+              class="mx-4 block max-w-[200px] py-6 py-4 text-lg font-bold text-primary transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-0 xl:mx-0"
+              >M. Toyib Hidayat
+            </a>
+          </div>
+          <div class="flex items-center px-4">
+            <button
+              id="hamberger"
+              name="hamberger"
+              type="button"
+              class="absolute right-4 block lg:hidden"
+            >
+              <span
+                class="hamberger-line origin-top-left transition duration-300 ease-in-out"
+              ></span>
+              <span
+                class="hamberger-line transition duration-300 ease-in-out"
+              ></span>
+              <span
+                class="hamberger-line origin-bottom-left transition duration-300 ease-in-out"
+              ></span>
+            </button>
 
-                <a href="#Home" class="font-bold text-lg text-primary block py-6 max-w-[200px] mx-4 py-4 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-0 xl:mx-0">M. Toyib Hidayat
-                </a>  
-            </div>
-             <div class="flex items-center px-4">
-                <button id="hamberger" name="hamberger" type="button"
-                class="block absolute right-4 lg:hidden">
-                <span class="hamberger-line transition duration-300 
-                ease-in-out origin-top-left"></span>
-                <span class="hamberger-line transition duration-300 
-                ease-in-out"></span>
-                <span class="hamberger-line transition duration-300 
-                ease-in-out origin-bottom-left"></span>
+            <nav
+              id="nav-menu"
+              class="absolute right-4 top-full hidden w-full max-w-[250px] rounded-lg bg-white py-5 shadow-lg dark:bg-dark dark:shadow-slate-500 lg:static lg:block lg:max-w-full lg:rounded-none lg:bg-transparent lg:shadow-none lg:dark:bg-transparent"
+            >
+              <ul class="block lg:flex">
+                <li class="group">
+                  <a
+                    href="#Home"
+                    class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white"
+                    >Beranda</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="#about"
+                    class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white"
+                    >Tentang</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="#portfolio"
+                    class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white"
+                    >Portfolio</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="#keluarga"
+                    class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white"
+                    >Keluarga</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="#pendukung"
+                    class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white"
+                    >Pendukung</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="#blog"
+                    class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white"
+                    >Blog</a
+                  >
+                </li>
 
-                </button>
-                
-                <nav id="nav-menu" class="hidden absolute py-5 bg-white 
-                shadow-lg dark:bg-dark lg:dark:bg-transparent dark:shadow-slate-500 rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static 
-                lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none">
-                    <ul class="block lg:flex">
-                    <li class="group">
-                        <a href="#Home" class="text-base text-dark py-2 mx-8 flex
-                        group-hover:text-primary dark:text-white
-                        ">Beranda</a>
-                    </li>
-                    <li class="group">
-                        <a href="#about" class="text-base text-dark py-2 mx-8 flex 
-                        group-hover:text-primary dark:text-white
-                        ">Tentang</a>
-                    </li>
-                    <li class="group">
-                        <a href="#portfolio" class="text-base text-dark py-2 mx-8 flex 
-                        group-hover:text-primary dark:text-white
-                        ">Portfolio</a>
-                    </li>
-                    <li class="group">
-                        <a href="#keluarga" class="text-base text-dark py-2 mx-8 flex 
-                        group-hover:text-primary dark:text-white
-                        ">Keluarga</a>
-                    </li>
-                    <li class="group">
-                        <a href="#pendukung" class="text-base text-dark py-2 mx-8 flex 
-                        group-hover:text-primary dark:text-white
-                        ">Pendukung</a>
-                    </li>
-                    <li class="group">
-                        <a href="#blog" class="text-base text-dark py-2 mx-8 flex 
-                        group-hover:text-primary dark:text-white
-                        ">Blog</a>
-                    </li>
-                    
-                    <li class="group">
-                        <a href="#contact" class="text-base text-dark py-2 mx-8 flex 
-                        group-hover:text-primary dark:text-white
-                        ">Contact</a>
-                    </li>
-                    <li class="mt-3 lg:mt-0 flex items-center pl-8">
-                        <div class="flex">
-                            <span class="mr-2 text-sm text-slate-500">Light</span>
-                            <input type="checkbox" class="hidden" id="dark-toggle" />
-                            <label for="dark-toggle">
-                                <div class="flex h-5 w-9 cursor-pointer items-center rounded-full bg-slate-500 p-1">
-                                    <div class="toggle-circle h-4 w-4 rounded-full bg-white"></div>
-                                </div>
-                            </label>
-                            <span class="ml-2 text-sm text-slate-500">Dark</span>
-                        </div>
-                    </li>
-                    </ul>
-                </nav>
-
-            </div>
-
+                <li class="group">
+                  <a
+                    href="#contact"
+                    class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white"
+                    >Contact</a
+                  >
+                </li>
+                <li class="mt-3 flex items-center pl-8 lg:mt-0">
+                  <div class="flex">
+                    <span class="mr-2 text-sm text-slate-500">Light</span>
+                    <input type="checkbox" class="hidden" id="dark-toggle" />
+                    <label for="dark-toggle">
+                      <div
+                        class="flex h-5 w-9 cursor-pointer items-center rounded-full bg-slate-500 p-1"
+                      >
+                        <div
+                          class="toggle-circle h-4 w-4 rounded-full bg-white"
+                        ></div>
+                      </div>
+                    </label>
+                    <span class="ml-2 text-sm text-slate-500">Dark</span>
+                  </div>
+                </li>
+              </ul>
+            </nav>
+          </div>
         </div>
-
-    </div>
-
+      </div>
     </header>
-     <!-- Header And -->
+    <!-- Header And -->
 
-<!-- Hero Section Start-->
-<section id="Home" class="pt-36 dark:bg-dark">
-    <div class="container">
-           <div class="flex flex-wrap">
-            <div class="w-full self-center px-4 lg:w-1/2">
-                <h1 class="text-base font-semibold text-primary md:text-xl animate__animated animate__fadeInUp animate__delay-ls"data-aos="fade-up" data-aos-duration="1000">Halo Sahabat 🙌, Saya
-                    <span class="block font-bold text-dark text-4xl mt-1 md:text-xl lg:text-5xl dark:text-white">M. Toyib Hidayat,S.Kom</span> </h1>
-                <h2 class="font-medium text-secondary text-lg mb-5 lg:text-2xl dark:text-white animate__animated animate__fadeInUp animate__delay-ls">
-                    Mari Belajar Teknik Komputer <span>&</span> <span class="text-dark lg:text-2xl dark:text-white"data-aos="fade-up" data-aos-duration="1000">Jaringan</spam></h2>
-                <p class="font-medium text-secondary mb-10 leading-relaxed dark:text-white animate__animated animate__fadeInUp animate__delay-ls" data-aos="fade-up" data-aos-duration="1000">Pembelajarannya Asik
-                    <span class="text-primary font-bold ">
-                        <a href="#" class="text-base font-bold
-                        hover:opacity-80 animate-pulse transition duration-300 hover:grayscale-0 ease-in-out" data-aos="fade-up" data-aos-duration="1000">Bukan!</a></span></p>
-                    <a href="#" class="text-base font-semibold text-white
-                    bg-primary py-3 px-8 rounded-full hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out 
-                    animate__animated animate__fadeInUp animate__delay-ls"data-aos="fade-up" data-aos-duration="1000">Ikuti Saya</a>
+    <!-- Hero Section Start-->
+    <section id="Home" class="pt-36 dark:bg-dark">
+      <div class="container">
+        <div class="flex flex-wrap">
+          <div class="w-full self-center px-4 lg:w-1/2">
+            <h1
+              class="animate__animated animate__fadeInUp animate__delay-ls text-base font-semibold text-primary md:text-xl"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
+              Halo Sahabat 🙌, Saya
+              <span
+                class="mt-1 block text-4xl font-bold text-dark dark:text-white md:text-xl lg:text-5xl"
+                >M. Toyib Hidayat,S.Kom</span
+              >
+            </h1>
+
+            <p
+              class="animate__animated animate__fadeInUp animate__delay-ls mb-10 font-medium leading-relaxed text-secondary dark:text-white"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
+              Mari Belajar Teknik Komputer & Jaringan
+              <span class="font-bold text-primary">
+                <a
+                  href="#"
+                  class="animate-pulse text-base font-bold transition duration-300 ease-in-out hover:opacity-80 hover:grayscale-0"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  >Bersama!</a
+                ></span
+              >
+            </p>
+            <a
+              href="#"
+              class="animate__animated animate__fadeInUp animate__delay-ls rounded-full bg-primary py-3 px-8 text-base font-semibold text-white transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              >Ikuti Saya</a
+            >
+          </div>
+          <div id="button" class="w-full self-end px-6 lg:w-1/2">
+            <div
+              class="animate__animated animate__fadeInUp animate__delay-ls relative mt-10 lg:right-0 lg:mt-10"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
+              <img
+                src="dist/img/111.png"
+                alt="Jasakulo"
+                class="mx-auto max-w-full"
+              />
             </div>
-            <div id="button" class="w-full  self-end px-6 lg:w-1/2">
-                <div class="relative mt-10 lg:mt-10 lg:right-0 animate__animated animate__fadeInUp animate__delay-ls" data-aos="fade-up" data-aos-duration="1000">
-                    <img src="dist/img/111.png" alt="Jasakulo"
-                    class="max-w-full mx-auto"/>
-                </div>
-               
-            </div>
+          </div>
         </div>
-    </div>
-</section>
-<!-- Hero Section And-->
+      </div>
+    </section>
+    <!-- Hero Section And-->
 
-<!--About Section start-->
-<section id="about" class="pt-36 pb-16 dark:bg-dark">
-    <div class="container" data-aos="fade-up" data-aos-duration="1000">
-        <h4 class="w-full px-4 mb-2 font-bold text-3xl appearance text-primary text-lg ">TENTANG SAYA</h4>
+    <!--About Section start-->
+    <section id="about" class="pt-36 pb-16 dark:bg-dark">
+      <div class="container" data-aos="fade-up" data-aos-duration="1000">
+        <h4
+          class="appearance mb-2 w-full px-4 text-3xl text-lg font-bold text-primary"
+        >
+          TENTANG SAYA
+        </h4>
         <div class="flex flex-wrap" data-aos="fade-up" data-aos-duration="1000">
-            <div class="w-full px-4 mb-10 lg:w-1/2">
-                <h2 class="font-bold text-dark text-3xl mb-4 mx-w-md lg:text-4xl dark:text-white">M. TOYIB HIDAYAT, S.Kom</h2>
-                <P class="font-medium text-base text-secondary mx-w-xl lg:text-lg text-justify">Saya adalah seorang Guru Kejuruan Teknik Komputer Dan Jaringan di SMK IT BAITUN NUR PUNGGUR, dan saya juga seoarang freelance untuk pembuatan Portfolio untuk guru penggerak,ataupun yang lain seperti Portfolio Company,Desain Grafis,dan sistem jaringan Komputer.</P>
+          <div class="mb-10 w-full px-4 lg:w-1/2">
+            <h2
+              class="mx-w-md mb-4 text-3xl font-bold text-dark dark:text-white lg:text-4xl"
+            >
+              M. TOYIB HIDAYAT, S.Kom
+            </h2>
+            <p
+              class="mx-w-xl text-justify text-base font-medium text-secondary lg:text-lg"
+            >
+              Saya adalah seorang Guru Kejuruan Teknik Komputer Dan Jaringan di
+              SMK IT BAITUN NUR PUNGGUR, dan saya juga seoarang freelance untuk
+              pembuatan Portfolio untuk guru penggerak,ataupun yang lain seperti
+              Portfolio Company,Desain Grafis,dan sistem jaringan Komputer.
+            </p>
+          </div>
+          <div
+            class="w-full px-4 lg:w-1/2"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            <h2
+              class="mx-w-md mb-4 text-3xl font-bold text-dark dark:text-white lg:text-4xl"
+            >
+              Ikuti Saya Disini !
+            </h2>
+            <p
+              class="mb-6 text-justify text-base font-medium text-secondary lg:text-lg"
+            >
+              Mari Bergabung Dengan Saya di Sosial Media Ataupun di media
+              pembelajaran saya, untuk menambah ilmu anda.
+            </p>
+            <h2
+              class="mx-w-md mb-4 text-xl font-semibold text-dark dark:text-white lg:text-2xl"
+            >
+              Sosial Media
+            </h2>
+            <div class="flex items-center" data-aos="fade-up">
+              <!-- Youtube -->
+              <a
+                href="https://youtube.com/@toyabikers"
+                target="_blank"
+                class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+              >
+                <svg
+                  role="img"
+                  width="20"
+                  class="fill-current"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>YouTube</title>
+                  <path
+                    d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+                  />
+                </svg>
+              </a>
+              <!-- Instagram -->
+              <a
+                href="https://Instagram.com/toya_camel"
+                target="_blank"
+                class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+              >
+                <svg
+                  role="img"
+                  width="20"
+                  class="fill-current"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>Instagram</title>
+                  <path
+                    d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"
+                  />
+                </svg>
+              </a>
+              <!-- Facebook -->
+              <a
+                href="https://Facebook.com/profile.php?id=100089576329053"
+                target="_blank"
+                class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+              >
+                <svg
+                  role="img"
+                  width="20"
+                  class="fill-current"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>Facebook</title>
+                  <path
+                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                  />
+                </svg>
+              </a>
+              <!-- Twitter -->
+              <a
+                href="https://Twitter.com/toyabikers"
+                target="_blank"
+                class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+              >
+                <svg
+                  role="img"
+                  width="20"
+                  class="fill-current"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>Twitter</title>
+                  <path
+                    d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"
+                  />
+                </svg>
+              </a>
+              <!-- Tiktok -->
+              <a
+                href="https://Tiktok.com/toyabikers"
+                target="_blank"
+                class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+              >
+                <svg
+                  role="img"
+                  width="20"
+                  class="fill-current"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>TikTok</title>
+                  <path
+                    d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"
+                  />
+                </svg>
+              </a>
             </div>
-            <div class="w-full px-4 lg:w-1/2" data-aos="fade-up" data-aos-duration="1000">
-                <h2 class="font-bold text-dark text-3xl mb-4 mx-w-md lg:text-4xl dark:text-white">Ikuti Saya Disini !</h2>
-                    <p class="font-medium text-base text-secondary mb-6 lg:text-lg text-justify" >Mari Bergabung Dengan Saya di Sosial Media Ataupun di media pembelajaran saya, untuk menambah ilmu anda.
-                    </p>
-                    <h2 class="font-semibold text-dark text-xl mb-4 mx-w-md lg:text-2xl dark:text-white">Sosial Media</h2>
-                    <div class="flex items-center" data-aos="fade-up">
-                        <!-- Youtube -->
-                        <a href="https://youtube.com/@toyabikers" 
-                        target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center 
-                        items-center border border-slate-300 text-slate-300
-                        hover:border-primary hover:bg-primary hover:text-white">
+            <p
+              class="mb-6 mt-2 text-justify text-base font-medium text-secondary lg:text-lg"
+            >
+              Follow Sosial Media Kami:<span class="font-bold text-primary">
+                <a
+                  href="#"
+                  class="bg:animate-none hover:grayscale-0ease-in-out text-base font-bold transition duration-300 hover:opacity-80"
+                  >Disini!</a
+                ></span
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--About Section And-->
 
-                        
-                        <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>YouTube</title><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-                    </a>
-                    <!-- Instagram -->
-                    <a href="https://Instagram.com/toya_camel"
-                    target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center 
-                    items-center border border-slate-300 text-slate-300
-                    hover:border-primary hover:bg-primary hover:text-white">
-                    <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Instagram</title><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/></svg>
-                      </a>
-                    <!-- Facebook -->  
-                      <a href="https://Facebook.com/profile.php?id=100089576329053"
-                    target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center 
-                    items-center border border-slate-300 text-slate-300
-                    hover:border-primary hover:bg-primary hover:text-white">
-                    <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Facebook</title><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-                       </a>
-                        <!-- Twitter -->  
-                      <a href="https://Twitter.com/toyabikers"
-                      target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center 
-                      items-center border border-slate-300 text-slate-300
-                      hover:border-primary hover:bg-primary hover:text-white">
-                      <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Twitter</title><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
-                        </a>
-                        <!-- Tiktok -->  
-                      <a href="https://Tiktok.com/toyabikers"
-                      target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center 
-                      items-center border border-slate-300 text-slate-300
-                      hover:border-primary hover:bg-primary hover:text-white">
-                      <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>TikTok</title><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
-                       </a>
-                    </div>
-                    <p class="font-medium text-base text-secondary mb-6 lg:text-lg text-justify mt-2" >Follow Sosial Media Kami:<span class="text-primary font-bold ">
-                        <a href="#" class="text-base font-bold
-                        hover:opacity-80 bg:animate-none transition duration-300 hover:grayscale-0ease-in-out">Disini!</a></span>
-                    </p>
-                           </div>
-        </div> 
-
-    </div>
-
-</section>
-<!--About Section And-->
-
-<!-- Portfolio section Start -->
-<section id="portfolio" class="pt-36 pb-16 bg-slate-100 dark:bg-slate-800">
-    <div class="countainer">
-        <div class="w-full px-4" >
-            <div class="max-w-xl mx-auto text-center mb-16">
-                <h4 class="font-semibold text-lg text-primary mb-2" data-aos="fade-up" data-aos-duration="1000">Porfolio</h4>
-                <h2 class="font-bold text-dark text-3xl mb-4 sm:xt-4xl lg:text-5xldark:text-white dark:text-white" data-aos="fade-up" data-aos-duration="1000">Project Saya</h2>
-                <p class="font-medium text-md text-secondary md:text-lg" data-aos="fade-up" data-aos-duration="1000">Dokumentasi Dari Berbagai Kegiatan/Project yang Pernah dan Saya lakukan sampai sekarang, dan alhamdulilah semua bisa bermanfaat untuk penggunanya.</p>
+    <!-- Portfolio section Start -->
+    <section id="portfolio" class="bg-slate-100 pt-36 pb-16 dark:bg-slate-800">
+      <div class="countainer">
+        <div class="w-full px-4">
+          <div class="mx-auto mb-16 max-w-xl text-center">
+            <h4
+              class="mb-2 text-lg font-semibold text-primary"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
+              Porfolio
+            </h4>
+            <h2
+              class="sm:xt-4xl lg:text-5xldark:text-white mb-4 text-3xl font-bold text-dark dark:text-white"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
+              Project Saya
+            </h2>
+            <p
+              class="text-md font-medium text-secondary md:text-lg"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
+              Dokumentasi Dari Berbagai Kegiatan/Project yang Pernah dan Saya
+              lakukan sampai sekarang, dan alhamdulilah semua bisa bermanfaat
+              untuk penggunanya.
+            </p>
+          </div>
+        </div>
+        <div
+          class="flex w-full flex-wrap justify-center px-4 xl:mx-auto xl:w-10/12"
+        >
+          <div
+            class="mb-12 p-4 md:w-1/2"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+          >
+            <div class="overflow-hidden rounded-md shadow-md">
+              <img
+                src="dist/img/galeri/desaingrafis.png"
+                alt="Landing Page"
+                width="w-full"
+              />
             </div>
-        </div>
-                <div class="w-full px-4 flex flex-wrap justify-center xl:w-10/12 xl:mx-auto"  >
-                    <div class="mb-12 p-4 md:w-1/2" data-aos="zoom-in" data-aos-duration="1000">
-                        <div class="rounded-md shadow-md overflow-hidden">
-                            <img src="dist/img/galeri/desaingrafis.png" alt="Landing Page"
-                            width="w-full"/>              
+            <h3
+              class="mt-5 mb-3 text-xl font-semibold text-dark dark:text-white"
+            >
+              Jasa Desain Grafis
+            </h3>
+            <p class="text-justify text-base font-medium text-secondary">
+              Hasil dari Project yang saya kerjakan sesuai ketentuan pelanggan
+              dan sesuai thema yang di inginkan pelanggan.sebisa mungkin
+              memberikan kemudahan dan kepuasan untuk desain yang mereka
+              inginkan.
+            </p>
+          </div>
 
-                </div>
-                <h3 class="font-semibold text-xl text-dark mt-5
-                mb-3 dark:text-white">Jasa Desain Grafis</h3>
-                <p class="font-medium text-base text-secondary text-justify">Hasil dari Project yang saya kerjakan sesuai ketentuan pelanggan dan sesuai thema yang di inginkan pelanggan.sebisa mungkin memberikan kemudahan dan kepuasan untuk desain yang mereka inginkan.</p>
-
+          <div
+            class="mb-12 p-4 md:w-1/2"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+          >
+            <div class="overflow-hidden rounded-md shadow-md">
+              <img
+                src="dist/img/galeri/web.jpg"
+                alt="Landing Page"
+                width="w-full"
+              />
             </div>
-            
-            <div class="mb-12 p-4 md:w-1/2" data-aos="zoom-in" data-aos-duration="1000">
-                <div class="rounded-md shadow-md overflow-hidden">
-                    <img src="dist/img/galeri/web.jpg" alt="Landing Page"
-                    width="w-full"/>              
-
+            <h3
+              class="mt-5 mb-3 text-xl font-semibold text-dark dark:text-white"
+            >
+              Jasa Membuat Portfolio
+            </h3>
+            <p class="text-justify text-base font-medium text-secondary">
+              Membuat Beberapa Karya website untuk pribadi ataupun company
+              Profile menggunakan software ataupun framework yang terbaru. untuk
+              mempermudah dalam sebuah project yang saya kerjakan.dangan sangat
+              membatu sekali framework tersebut.
+            </p>
+          </div>
+          <div
+            class="mb-12 p-4 md:w-1/2"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+          >
+            <div class="overflow-hidden rounded-md shadow-md">
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/55piHP8Vnq8"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <h3
+              class="mt-5 mb-3 text-xl font-semibold text-dark dark:text-white"
+            >
+              Jasa Membuat Video Cerita Pendek
+            </h3>
+            <p class="text-justify text-base font-medium text-secondary">
+              Dalam melakukan pekerjaan di dalam jaringan komputer dan
+              komponen-komponennya yang lain, seperti instalasi jaringan,
+              configurasi mikrotik, sampai dengan security Farwall.
+            </p>
+          </div>
+          <div
+            class="mb-12 p-4 md:w-1/2"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+          >
+            <div class="overflow-hidden rounded-md shadow-md">
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/4oodB2WjLJ0"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <h3
+              class="mt-5 mb-3 text-xl font-semibold text-dark dark:text-white"
+            >
+              Jasa Membuat Video Promosi
+            </h3>
+            <p class="text-justify text-base font-medium text-secondary">
+              Saya juga menjadi seorang Guru, awal mula saya menjadi seorang
+              Guru yaitu setelah saya selesai pendidikan Kuliah di UM metro, dan
+              saya mendaftarkan diri enjadi sorang guru Kursus di salah satu
+              tempat kursus di metro, ITech Corse Metro, dan senggang beberapa
+              tahun saya sekarang menjadi guru di SMK IT BAITUN NUR PUNGGUR
+              Sampai sekarang.
+            </p>
+          </div>
+          <div
+            class="mb-12 p-4 md:w-1/2"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+          >
+            <div class="overflow-hidden rounded-md shadow-md">
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/RTM6qW0tqks"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <h3
+              class="mt-5 mb-3 text-xl font-semibold text-dark dark:text-white"
+            >
+              Prestasi Olahraga
+            </h3>
+            <p class="text-justify text-base font-medium text-secondary">
+              Saya Pernah mendapatkan beberapa Prestasi dalam Olahraga
+              Voli,Sepak Bola,dan Futsal, tinigkat mahasiswa,Desa,Kabupaten.dan
+              semua itu saya lakukan semua karena hobi saya, sehingga dalam
+              melakukanya saya dengan senang dan sangat tekun, sehingga dapat
+              meraih prestasi itu.
+            </p>
+          </div>
+          <div
+            class="mb-12 p-4 md:w-1/2"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+          >
+            <div class="overflow-hidden rounded-md shadow-md">
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/rMg2D809g4c"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <h3
+              class="mt-5 mb-3 text-xl font-semibold text-dark dark:text-white"
+            >
+              Otomotif
+            </h3>
+            <p class="text-justify text-base font-medium text-secondary">
+              Beberapa Pengalaman serta Prestasi juga pernah saya dapatkan di
+              Otomotif Contest di Lampung, dan saya juga pernah mengadakan
+              Kontes Otomotif Contest Foto Motor Streetcub.
+            </p>
+          </div>
         </div>
-        <h3 class="font-semibold text-xl text-dark mt-5
-        mb-3 dark:text-white">Jasa Membuat Portfolio</h3>
-        <p class="font-medium text-base text-secondary text-justify">Membuat Beberapa Karya website untuk pribadi ataupun company Profile menggunakan software ataupun framework yang terbaru. untuk mempermudah dalam sebuah project yang saya kerjakan.dangan sangat membatu sekali framework tersebut.</p>
-
-    </div>
-    <div class="mb-12 p-4 md:w-1/2" data-aos="zoom-in" data-aos-duration="1000">
-        <div class="rounded-md shadow-md overflow-hidden">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/55piHP8Vnq8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>    
-
-</div>
-<h3 class="font-semibold text-xl text-dark mt-5
-mb-3 dark:text-white">Jasa Membuat Video Cerita Pendek</h3>
-<p class="font-medium text-base text-secondary text-justify">Dalam melakukan pekerjaan di dalam jaringan komputer dan komponen-komponennya yang lain, seperti instalasi jaringan, configurasi mikrotik, sampai dengan security Farwall.</p>
-</div>
-<div class="mb-12 p-4 md:w-1/2" data-aos="zoom-in" data-aos-duration="1000">
-    <div class="rounded-md shadow-md overflow-hidden">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/4oodB2WjLJ0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-       
-</div>
-<h3 class="font-semibold text-xl text-dark mt-5
-mb-3 dark:text-white">Jasa Membuat Video Promosi</h3>
-<p class="font-medium text-base text-secondary text-justify">Saya juga menjadi seorang Guru, awal mula saya menjadi seorang Guru yaitu setelah saya selesai pendidikan Kuliah di UM metro, dan saya mendaftarkan diri enjadi sorang guru Kursus di salah satu tempat kursus di metro, ITech Corse Metro, dan senggang beberapa tahun saya sekarang menjadi guru di SMK IT BAITUN NUR PUNGGUR Sampai sekarang.</p>
-</div>
-<div class="mb-12 p-4 md:w-1/2" data-aos="zoom-in" data-aos-duration="1000">
-    <div class="rounded-md shadow-md overflow-hidden">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/RTM6qW0tqks" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>            
-</div>
-<h3 class="font-semibold text-xl text-dark mt-5
-mb-3 dark:text-white">Prestasi Olahraga</h3>
-<p class="font-medium text-base text-secondary text-justify">Saya Pernah mendapatkan beberapa Prestasi dalam Olahraga Voli,Sepak Bola,dan Futsal, tinigkat mahasiswa,Desa,Kabupaten.dan semua itu saya lakukan semua karena hobi saya, sehingga dalam melakukanya saya dengan senang dan sangat tekun, sehingga dapat meraih prestasi itu.</p>
-</div>
-<div class="mb-12 p-4 md:w-1/2" data-aos="zoom-in" data-aos-duration="1000">
-    <div class="rounded-md shadow-md overflow-hidden">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/rMg2D809g4c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>            
-</div>
-<h3 class="font-semibold text-xl text-dark mt-5
-mb-3 dark:text-white">Otomotif</h3>
-<p class="font-medium text-base text-secondary text-justify">Beberapa Pengalaman serta Prestasi juga pernah saya dapatkan di Otomotif Contest di Lampung, dan saya juga pernah mengadakan Kontes Otomotif Contest Foto Motor Streetcub.</p>
-</div>
-        </div>
-    </div>
+      </div>
     </section>
     <!-- Portfolio section And -->
 
     <!-- keluarga section Start -->
-    <section id="keluarga" class="pt-36 pb-16 bg-slate-100 dark:bg-dark">
-        <div class="container" >
-            <div class="w-full px-4" >
-                <div class="max-w-xl mx-auto text-center mb-16">
-                    <h4 class="font-semibold text-lg text-primary mb-2"data-aos="fade-up" data-aos-duration="1000">KELUARGA SAYA</h4>
-                    <h2 class="font-bold text-dark text-3xl mb-4 sm:xt-4xl lg:text-5xl dark:text-white" data-aos="fade-up" data-aos-duration="1000">M. TOYIB HIDAYAT</h2>
-                    <p class="font-medium text-md text-secondary md:text-lg" data-aos="fade-up" data-aos-duration="1000">Saya Mempunyai Keluarga yang sangat Harmonis,istri saya dan kedua anak saya yang sangat memberikan motifasi saya untuk selalu semangat</p>
-                </div>
-            </div>
-            <div class="flex flex-wrap" data-aos="zoom-in" data-aos-duration="1000">
-                <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden
-                    mb-10 dark:bg-slate-800">
-                    <img src="dist/img/keluarga/AA.jpg"
-                    alt="mtoyibhidayat" class="w-full"/>
-                    <div class="py-8 px-6">
-                        <h3 class="block mb-3 font-semibold text-xl
-                        text-dark hover:text-primary truncate dark:text-white">
-                            <a href="https://instagram.com/toya_camel" target="_blank">M. TOYIB HIDAYAT</a></h3>
-                        <p class="font-medium text-base text-secondary mb-6">Kepala Keluarga</p>
-                             <a href="https://instagram.com/toya_camel" target="_blank" class="font-medium text-sm text-white
-                             bg-primary py-2 px-4 rounded-lg hover:opacity-80">Tentang Saya</a>
-
-                    </div>
-
-                    </div>
-
-                </div>
-                <div class="w-full px-4 lg:w-1/2 xl:w-1/3" data-aos="zoom-in" data-aos-duration="1000">
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden
-                    mb-10 dark:bg-slate-800">
-                    <img src="dist/img/keluarga/tika.jpg"
-                    alt="indrakurniawan" class="w-full"/>
-                    <div class="py-8 px-6">
-                        <h3 class="block mb-3 font-semibold text-xl
-                        text-dark hover:text-primary truncate dark:text-white">
-                            <a href="https://instagram.com/mustikaratuku" target="_blank">MUSTIKA RATU</a></h3>
-                            <p class="font-medium text-base text-secondary mb-6">Ibu Rumah Tangga</p>
-                            <a href="https://instagram.com/mustikaratuku" target="_blank" class="font-medium text-sm text-white
-                            bg-primary py-2 px-4 rounded-lg hover:opacity-80">Tentang Saya</a>
-
-                    </div>
-
-                    </div>
-
-                </div>
-                <div class="w-full px-4 lg:w-1/2 xl:w-1/3" data-aos="zoom-in"data-aos-duration="1000">
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden
-                    mb-10 dark:bg-slate-800">
-                    <img src="dist/img/keluarga/bina.png"
-                    alt="armalia" class="w-full"/>
-                    <div class="py-8 px-6">
-                        <h3 class="block mb-3 font-semibold text-xl
-                        text-dark hover:text-primary truncate dark:text-white">
-                            <a href="https://instagram.com/sabrinacamiladiva" target="_blank">SABRINA CAMILA DIVA</a></h3>
-                            <p class="font-medium text-base text-secondary mb-6">Anak Pertama</p>
-                            <a href="https://instagram.com/sabrinacamiladiva" target="_blank" class="font-medium text-sm text-white
-                            bg-primary py-2 px-4 rounded-lg hover:opacity-80">Tentang Saya</a>
-                    </div>
-
-                    </div>
-
-                </div>
-                <div class="w-full px-4 lg:w-1/2 xl:w-1/3" data-aos="zoom-in"data-aos-duration="1000">
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden
-                    mb-10 dark:bg-slate-800">
-                    <img src="dist/img/keluarga/zea.jpg"
-                    alt="armalia" class="w-full"/>
-                    <div class="py-8 px-6">
-                        <h3 class="block mb-3 font-semibold text-xl
-                        text-dark hover:text-primary truncate dark:text-white">
-                            <a href="https://instagram.com/adreenazeaauristela" target="_blank">ADREENA ZEA AURISTELA</a></h3>
-                            <p class="font-medium text-base text-secondary mb-6">Anak Kedua</p>
-                            <a href="https://instagram.com/adreenazeaauristela" target="_blank" class="font-medium text-sm text-white
-                            bg-primary py-2 px-4 rounded-lg hover:opacity-80">Tentang Saya</a>
-                    </div>
-
-                    </div>
-
-                </div>
-
-            </div>
+    <section id="keluarga" class="bg-slate-100 pt-36 pb-16 dark:bg-dark">
+      <div class="container">
+        <div class="w-full px-4">
+          <div class="mx-auto mb-16 max-w-xl text-center">
+            <h4
+              class="mb-2 text-lg font-semibold text-primary"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
+              KELUARGA SAYA
+            </h4>
+            <h2
+              class="sm:xt-4xl mb-4 text-3xl font-bold text-dark dark:text-white lg:text-5xl"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
+              M. TOYIB HIDAYAT
+            </h2>
+            <p
+              class="text-md font-medium text-secondary md:text-lg"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
+              Saya Mempunyai Keluarga yang sangat Harmonis,istri saya dan kedua
+              anak saya yang sangat memberikan motifasi saya untuk selalu
+              semangat
+            </p>
+          </div>
         </div>
-
+        <div class="flex flex-wrap" data-aos="zoom-in" data-aos-duration="1000">
+          <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
+            <div
+              class="mb-10 overflow-hidden rounded-xl bg-white shadow-lg dark:bg-slate-800"
+            >
+              <img
+                src="dist/img/keluarga/AA.jpg"
+                alt="mtoyibhidayat"
+                class="w-full"
+              />
+              <div class="py-8 px-6">
+                <h3
+                  class="mb-3 block truncate text-xl font-semibold text-dark hover:text-primary dark:text-white"
+                >
+                  <a href="https://instagram.com/toya_camel" target="_blank"
+                    >M. TOYIB HIDAYAT</a
+                  >
+                </h3>
+                <p class="mb-6 text-base font-medium text-secondary">
+                  Kepala Keluarga
+                </p>
+                <a
+                  href="https://instagram.com/toya_camel"
+                  target="_blank"
+                  class="rounded-lg bg-primary py-2 px-4 text-sm font-medium text-white hover:opacity-80"
+                  >Tentang Saya</a
+                >
+              </div>
+            </div>
+          </div>
+          <div
+            class="w-full px-4 lg:w-1/2 xl:w-1/3"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+          >
+            <div
+              class="mb-10 overflow-hidden rounded-xl bg-white shadow-lg dark:bg-slate-800"
+            >
+              <img
+                src="dist/img/keluarga/tika.jpg"
+                alt="indrakurniawan"
+                class="w-full"
+              />
+              <div class="py-8 px-6">
+                <h3
+                  class="mb-3 block truncate text-xl font-semibold text-dark hover:text-primary dark:text-white"
+                >
+                  <a href="https://instagram.com/mustikaratuku" target="_blank"
+                    >MUSTIKA RATU</a
+                  >
+                </h3>
+                <p class="mb-6 text-base font-medium text-secondary">
+                  Ibu Rumah Tangga
+                </p>
+                <a
+                  href="https://instagram.com/mustikaratuku"
+                  target="_blank"
+                  class="rounded-lg bg-primary py-2 px-4 text-sm font-medium text-white hover:opacity-80"
+                  >Tentang Saya</a
+                >
+              </div>
+            </div>
+          </div>
+          <div
+            class="w-full px-4 lg:w-1/2 xl:w-1/3"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+          >
+            <div
+              class="mb-10 overflow-hidden rounded-xl bg-white shadow-lg dark:bg-slate-800"
+            >
+              <img
+                src="dist/img/keluarga/bina.png"
+                alt="armalia"
+                class="w-full"
+              />
+              <div class="py-8 px-6">
+                <h3
+                  class="mb-3 block truncate text-xl font-semibold text-dark hover:text-primary dark:text-white"
+                >
+                  <a
+                    href="https://instagram.com/sabrinacamiladiva"
+                    target="_blank"
+                    >SABRINA CAMILA DIVA</a
+                  >
+                </h3>
+                <p class="mb-6 text-base font-medium text-secondary">
+                  Anak Pertama
+                </p>
+                <a
+                  href="https://instagram.com/sabrinacamiladiva"
+                  target="_blank"
+                  class="rounded-lg bg-primary py-2 px-4 text-sm font-medium text-white hover:opacity-80"
+                  >Tentang Saya</a
+                >
+              </div>
+            </div>
+          </div>
+          <div
+            class="w-full px-4 lg:w-1/2 xl:w-1/3"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+          >
+            <div
+              class="mb-10 overflow-hidden rounded-xl bg-white shadow-lg dark:bg-slate-800"
+            >
+              <img
+                src="dist/img/keluarga/zea.jpg"
+                alt="armalia"
+                class="w-full"
+              />
+              <div class="py-8 px-6">
+                <h3
+                  class="mb-3 block truncate text-xl font-semibold text-dark hover:text-primary dark:text-white"
+                >
+                  <a
+                    href="https://instagram.com/adreenazeaauristela"
+                    target="_blank"
+                    >ADREENA ZEA AURISTELA</a
+                  >
+                </h3>
+                <p class="mb-6 text-base font-medium text-secondary">
+                  Anak Kedua
+                </p>
+                <a
+                  href="https://instagram.com/adreenazeaauristela"
+                  target="_blank"
+                  class="rounded-lg bg-primary py-2 px-4 text-sm font-medium text-white hover:opacity-80"
+                  >Tentang Saya</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
     <!-- Keluarga section And -->
 
     <!-- pendukukng section Start -->
-    <section id="pendukung" class="pt-36 pb-16 bg-slate-700 dark:bg-slate-300">
-        <div class="container" >
-            <div class="w-full px-4" >
-                <div class=" mx-auto text-center mb-16">
-                    <h4 class="font-semibold text-lg text-primary mb-2"data-aos="fade-up" data-aos-duration="1000">Pendukung Pekerjaan</h4>
-                    <h2 class="font-bold text-white text-3xl mb-4 sm:xt-4xl lg:text-5xl dark:text-dark" data-aos="fade-up" data-aos-duration="1000">Yang Membantu Saya Mempermudah Pekerjaan</h2>
-                    <p class="font-medium text-md text-secondary md:text-lg" data-aos="fade-up" data-aos-duration="1000">Beberapa Aplikasi dan Alat Bantu Lainya yang mendukung saya dalam berkarya dan bekerja, dengan beberapa Aplikasi Tersebut sangat memudahkan saya dalam menyelesaikanya.</p>
-                </div>
-            </div>
-            <div class="w-full px-4" width="20" class="fill-current">
-               <div class="flex flex-wrap items-center justify-center">
-                <a href="#" class="max-w-[120px] mx-4 py-4 grayscale
-                opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8"data-aos="fade-up"
-                data-aos-duration="3000">
-                <img src="dist/img/clients/google.svg" alt="google"></a>
-                <a href="#" class="max-w-[120px] mx-4 py-4 grayscale
-                opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8"data-aos="fade-up"
-                data-aos-duration="3000">
-                <img src="dist/img/clients/github.svg" alt="github"></a>
-                <a href="#" class="max-w-[120px] mx-4 py-4 grayscale
-                opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8"data-aos="fade-up"
-                data-aos-duration="3000">
-                <img src="dist/img/clients/tailwind.svg" alt="tailwind"></a>
-                <a href="#" class="max-w-[120px] mx-4 py-4 grayscale
-                opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8"data-aos="fade-up"
-                data-aos-duration="3000">
-                <img src="dist/img/clients/yt.svg" alt="youtube"></a>
-
-               </div> 
-
-            </div>
+    <section id="pendukung" class="bg-slate-700 pt-36 pb-16 dark:bg-slate-300">
+      <div class="container">
+        <div class="w-full px-4">
+          <div class="mx-auto mb-16 text-center">
+            <h4
+              class="mb-2 text-lg font-semibold text-primary"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
+              Pendukung Pekerjaan
+            </h4>
+            <h2
+              class="sm:xt-4xl mb-4 text-3xl font-bold text-white dark:text-dark lg:text-5xl"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
+              Yang Membantu Saya Mempermudah Pekerjaan
+            </h2>
+            <p
+              class="text-md font-medium text-secondary md:text-lg"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
+              Beberapa Aplikasi dan Alat Bantu Lainya yang mendukung saya dalam
+              berkarya dan bekerja, dengan beberapa Aplikasi Tersebut sangat
+              memudahkan saya dalam menyelesaikanya.
+            </p>
+          </div>
         </div>
-
+        <div class="w-full px-4" width="20" class="fill-current">
+          <div class="flex flex-wrap items-center justify-center">
+            <a
+              href="#"
+              class="mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8"
+              data-aos="fade-up"
+              data-aos-duration="3000"
+            >
+              <img src="dist/img/clients/google.svg" alt="google"
+            /></a>
+            <a
+              href="#"
+              class="mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8"
+              data-aos="fade-up"
+              data-aos-duration="3000"
+            >
+              <img src="dist/img/clients/github.svg" alt="github"
+            /></a>
+            <a
+              href="#"
+              class="mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8"
+              data-aos="fade-up"
+              data-aos-duration="3000"
+            >
+              <img src="dist/img/clients/tailwind.svg" alt="tailwind"
+            /></a>
+            <a
+              href="#"
+              class="mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8"
+              data-aos="fade-up"
+              data-aos-duration="3000"
+            >
+              <img src="dist/img/clients/yt.svg" alt="youtube"
+            /></a>
+          </div>
+        </div>
+      </div>
     </section>
     <!-- pendukung section and -->
-    
+
     <!-- aksi section Start -->
-    <section id="blog" class="pt-36 pb-16 bg-slate-100 dark:bg-dark">
-        <div class="container">
-            <div class="w-full px-4" class="fill-current" >
-                <div class="max-w-xl mx-auto text-center mb-16">
-                    <h4 class="font-semibold text-lg text-primary mb-2" data-aos="fade-up" data-aos-duration="1000">Blog</h4>
-                    <h2 class="font-bold text-dark text-3xl mb-4 sm:xt-4xl lg:text-5xl dark:text-white" data-aos="fade-up" data-aos-duration="1000">Referensi Saya</h2>
-                    <p class="font-medium text-md text-secondary md:text-lg" data-aos="fade-up" data-aos-duration="1000">Beberapa referensi untuk menunjang pekerjaan saya,sehingga memudahkan saya untuk menyelesaikan pekerjaan saya.</p>
-                </div>
-            </div>
-            <div class="flex flex-wrap">
-                <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden
-                    mb-10 dark:bg-slate-800">
-                    <img src="https://source.unsplash.com/360x200?jaringan-komputer"
-                    alt="pembangunan" class="w-full"/>
-                    <div class="py-8 px-6">
-                        <h3 class="block mb-3 font-semibold text-xl
-                        text-dark hover:text-primary truncate dark:text-white">
-                            <a href="#">Jaringan Komputer</a></h3>
-                        <p class="font-medium text-base text-secondary mb-6 text-justify">Berita tentang Jaringan Komputaer terbaru yang mungkin anda bisa pelajari</p>
-                             <a href="#" class="font-medium text-sm text-white
-                             bg-primary py-2 px-4 rounded-lg hover:opacity-80">Baca Selengkapnya</a>
-
-                    </div>
-
-                    </div>
-
-                </div>
-                <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden
-                    mb-10 dark:bg-slate-800">
-                    <img src="https://source.unsplash.com/360x200?Desain-grafis"
-                    alt="arsitek" class="w-full"/>
-                    <div class="py-8 px-6">
-                        <h3 class="block mb-3 font-semibold text-xl
-                        text-dark hover:text-primary truncate dark:text-white">
-                            <a href="#">Desain Grafis</a></h3>
-                        <p class="font-medium text-base text-secondary mb-6 text-justify">Berita tentang Desain Grafis terbaru yang mungkin anda bisa pelajari</p>
-                             <a href="#" class="font-medium text-sm text-white
-                             bg-primary py-2 px-4 rounded-lg hover:opacity-80">Baca Selengkapnya</a>
-
-                    </div>
-
-                    </div>
-
-                </div>
-                <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden
-                    mb-10 dark:bg-slate-800">
-                    <img src="https://source.unsplash.com/360x200?website-portfolio"
-                    alt="tokobangunan" class="w-full"/>
-                    <div class="py-8 px-6">
-                        <h3 class="block mb-3 font-semibold text-xl
-                        text-dark hover:text-primary truncate dark:text-white">
-                            <a href="#">website</a></h3>
-                        <p class="font-medium text-base text-secondary mb-6 text-justify">Berita tentang Website terbaru yang mungkin anda bisa pelajari</p>
-                             <a href="#" class="font-medium text-sm text-white
-                             bg-primary py-2 px-4 rounded-lg hover:opacity-80">Baca Selengkapnya</a>
-
-                    </div>
-
-                    </div>
-
-                </div>
-
-            </div>
+    <section id="blog" class="bg-slate-100 pt-36 pb-16 dark:bg-dark">
+      <div class="container">
+        <div class="w-full px-4" class="fill-current">
+          <div class="mx-auto mb-16 max-w-xl text-center">
+            <h4
+              class="mb-2 text-lg font-semibold text-primary"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
+              Blog
+            </h4>
+            <h2
+              class="sm:xt-4xl mb-4 text-3xl font-bold text-dark dark:text-white lg:text-5xl"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
+              Referensi Saya
+            </h2>
+            <p
+              class="text-md font-medium text-secondary md:text-lg"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
+              Beberapa referensi untuk menunjang pekerjaan saya,sehingga
+              memudahkan saya untuk menyelesaikan pekerjaan saya.
+            </p>
+          </div>
         </div>
-
+        <div class="flex flex-wrap">
+          <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
+            <div
+              class="mb-10 overflow-hidden rounded-xl bg-white shadow-lg dark:bg-slate-800"
+            >
+              <img
+                src="https://source.unsplash.com/360x200?jaringan-komputer"
+                alt="pembangunan"
+                class="w-full"
+              />
+              <div class="py-8 px-6">
+                <h3
+                  class="mb-3 block truncate text-xl font-semibold text-dark hover:text-primary dark:text-white"
+                >
+                  <a href="#">Jaringan Komputer</a>
+                </h3>
+                <p
+                  class="mb-6 text-justify text-base font-medium text-secondary"
+                >
+                  Berita tentang Jaringan Komputaer terbaru yang mungkin anda
+                  bisa pelajari
+                </p>
+                <a
+                  href="#"
+                  class="rounded-lg bg-primary py-2 px-4 text-sm font-medium text-white hover:opacity-80"
+                  >Baca Selengkapnya</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
+            <div
+              class="mb-10 overflow-hidden rounded-xl bg-white shadow-lg dark:bg-slate-800"
+            >
+              <img
+                src="https://source.unsplash.com/360x200?Desain-grafis"
+                alt="arsitek"
+                class="w-full"
+              />
+              <div class="py-8 px-6">
+                <h3
+                  class="mb-3 block truncate text-xl font-semibold text-dark hover:text-primary dark:text-white"
+                >
+                  <a href="#">Desain Grafis</a>
+                </h3>
+                <p
+                  class="mb-6 text-justify text-base font-medium text-secondary"
+                >
+                  Berita tentang Desain Grafis terbaru yang mungkin anda bisa
+                  pelajari
+                </p>
+                <a
+                  href="#"
+                  class="rounded-lg bg-primary py-2 px-4 text-sm font-medium text-white hover:opacity-80"
+                  >Baca Selengkapnya</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
+            <div
+              class="mb-10 overflow-hidden rounded-xl bg-white shadow-lg dark:bg-slate-800"
+            >
+              <img
+                src="https://source.unsplash.com/360x200?website-portfolio"
+                alt="tokobangunan"
+                class="w-full"
+              />
+              <div class="py-8 px-6">
+                <h3
+                  class="mb-3 block truncate text-xl font-semibold text-dark hover:text-primary dark:text-white"
+                >
+                  <a href="#">website</a>
+                </h3>
+                <p
+                  class="mb-6 text-justify text-base font-medium text-secondary"
+                >
+                  Berita tentang Website terbaru yang mungkin anda bisa pelajari
+                </p>
+                <a
+                  href="#"
+                  class="rounded-lg bg-primary py-2 px-4 text-sm font-medium text-white hover:opacity-80"
+                  >Baca Selengkapnya</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
     <!-- aksi section And -->
 
     <!-- Contact section Start -->
-    <section id="contact" class="pt-36 pb-16 bg-slate-100 dark:bg-slate-800" >
-        <div class="countainer">
-            <div class="w-full px-4" >
-                <div class="max-w-xl mx-auto text-center mb-16">
-                    <h4 class="font-semibold text-lg text-primary mb-2" data-aos="fade-up" data-aos-duration="1000">Contact</h4>
-                    <h2 class="font-bold text-dark text-3xl mb-4 sm:xt-4xl lg:text-5xldark:text-white dark:text-white" data-aos="fade-up" data-aos-duration="1000">Hubungi Saya</h2>
-                    <p class="font-medium text-md text-secondary md:text-lg" data-aos="fade-up" data-aos-duration="1000">Saran dan Kritik, ataupun Informasi yang ingin anda dapatkan mengenai Project yang ingin anda buat dengan saya.</p>
-                </div>
-            </div>
-                    <div class="w-full px-4 flex flex-wrap justify-center xl:w-10/12 xl:mx-auto"  >
-                    
-                
-        <div class="mb-12 p-4 md:w-1/2" data-aos="zoom-in" data-aos-duration="1000">
-            <div class="rounded-md shadow-md overflow-hidden">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3974.5336788287195!2d105.23583761425789!3d-5.016807552483168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e40a51e62abe115%3A0x560646dce1ad07ba!2sJASAKULO!5e0!3m2!1sid!2sid!4v1675399566773!5m2!1sid!2sid" width="600" height="450" style="border:;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>    
-    
-    </div>
-    <h3 class="font-semibold text-xl text-dark mt-5
-    mb-3 dark:text-white">Maps M. Toyib Hidayat</h3>
-    <p class="font-medium text-base text-secondary text-justify">Semoga alamat yang di atas sangat membantu anda untuk menemukan lokasi saya, dan memudahkan anda untuk konsultasi kepada saya.</p>
-    </div>
-    <div class="mb-12 p-4 md:w-1/2" data-aos="zoom-in" data-aos-duration="1000">
-        <div class="rounded-md shadow-md overflow-hidden">
-           <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/CiR_YoNpUus/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/p/CiR_YoNpUus/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">View this post on Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/CiR_YoNpUus/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by toya camel 🇮🇩 (@toya_camel)
-        </a></p></div></blockquote><script src="//www.instagram.com/embed.js"></script>
-           
-    </div>
-    <h3 class="font-semibold text-xl text-dark mt-5
-    mb-3 dark:text-white"></h3>
-    <p class="font-medium text-base text-secondary text-justify"></p>
-    </div>
-   
-
-            </div>
+    <section id="contact" class="bg-slate-100 pt-36 pb-16 dark:bg-slate-800">
+      <div class="countainer">
+        <div class="w-full px-4">
+          <div class="mx-auto mb-16 max-w-xl text-center">
+            <h4
+              class="mb-2 text-lg font-semibold text-primary"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
+              Contact
+            </h4>
+            <h2
+              class="sm:xt-4xl lg:text-5xldark:text-white mb-4 text-3xl font-bold text-dark dark:text-white"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
+              Hubungi Saya
+            </h2>
+            <p
+              class="text-md font-medium text-secondary md:text-lg"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
+              Saran dan Kritik, ataupun Informasi yang ingin anda dapatkan
+              mengenai Project yang ingin anda buat dengan saya.
+            </p>
+          </div>
         </div>
-        </section>
+        <div
+          class="flex w-full flex-wrap justify-center px-4 xl:mx-auto xl:w-10/12"
+        >
+          <div
+            class="mb-12 p-4 md:w-1/2"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+          >
+            <div class="overflow-hidden rounded-md shadow-md">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3974.5336788287195!2d105.23583761425789!3d-5.016807552483168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e40a51e62abe115%3A0x560646dce1ad07ba!2sJASAKULO!5e0!3m2!1sid!2sid!4v1675399566773!5m2!1sid!2sid"
+                width="600"
+                height="450"
+                style="border: "
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+            <h3
+              class="mt-5 mb-3 text-xl font-semibold text-dark dark:text-white"
+            >
+              Maps M. Toyib Hidayat
+            </h3>
+            <p class="text-justify text-base font-medium text-secondary">
+              Semoga alamat yang di atas sangat membantu anda untuk menemukan
+              lokasi saya, dan memudahkan anda untuk konsultasi kepada saya.
+            </p>
+          </div>
+          <div
+            class="mb-12 p-4 md:w-1/2"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+          >
+            <div class="overflow-hidden rounded-md shadow-md">
+              <blockquote
+                class="instagram-media"
+                data-instgrm-captioned
+                data-instgrm-permalink="https://www.instagram.com/p/CiR_YoNpUus/?utm_source=ig_embed&amp;utm_campaign=loading"
+                data-instgrm-version="14"
+                style="
+                  background: #fff;
+                  border: 0;
+                  border-radius: 3px;
+                  box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.5),
+                    0 1px 10px 0 rgba(0, 0, 0, 0.15);
+                  margin: 1px;
+                  max-width: 540px;
+                  min-width: 326px;
+                  padding: 0;
+                  width: 99.375%;
+                  width: -webkit-calc(100% - 2px);
+                  width: calc(100% - 2px);
+                "
+              >
+                <div style="padding: 16px">
+                  <a
+                    href="https://www.instagram.com/p/CiR_YoNpUus/?utm_source=ig_embed&amp;utm_campaign=loading"
+                    style="
+                      background: #ffffff;
+                      line-height: 0;
+                      padding: 0 0;
+                      text-align: center;
+                      text-decoration: none;
+                      width: 100%;
+                    "
+                    target="_blank"
+                  >
+                    <div
+                      style="
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                      "
+                    >
+                      <div
+                        style="
+                          background-color: #f4f4f4;
+                          border-radius: 50%;
+                          flex-grow: 0;
+                          height: 40px;
+                          margin-right: 14px;
+                          width: 40px;
+                        "
+                      ></div>
+                      <div
+                        style="
+                          display: flex;
+                          flex-direction: column;
+                          flex-grow: 1;
+                          justify-content: center;
+                        "
+                      >
+                        <div
+                          style="
+                            background-color: #f4f4f4;
+                            border-radius: 4px;
+                            flex-grow: 0;
+                            height: 14px;
+                            margin-bottom: 6px;
+                            width: 100px;
+                          "
+                        ></div>
+                        <div
+                          style="
+                            background-color: #f4f4f4;
+                            border-radius: 4px;
+                            flex-grow: 0;
+                            height: 14px;
+                            width: 60px;
+                          "
+                        ></div>
+                      </div>
+                    </div>
+                    <div style="padding: 19% 0"></div>
+                    <div
+                      style="
+                        display: block;
+                        height: 50px;
+                        margin: 0 auto 12px;
+                        width: 50px;
+                      "
+                    >
+                      <svg
+                        width="50px"
+                        height="50px"
+                        viewBox="0 0 60 60"
+                        version="1.1"
+                        xmlns="https://www.w3.org/2000/svg"
+                        xmlns:xlink="https://www.w3.org/1999/xlink"
+                      >
+                        <g
+                          stroke="none"
+                          stroke-width="1"
+                          fill="none"
+                          fill-rule="evenodd"
+                        >
+                          <g
+                            transform="translate(-511.000000, -20.000000)"
+                            fill="#000000"
+                          >
+                            <g>
+                              <path
+                                d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"
+                              ></path>
+                            </g>
+                          </g>
+                        </g>
+                      </svg>
+                    </div>
+                    <div style="padding-top: 8px">
+                      <div
+                        style="
+                          color: #3897f0;
+                          font-family: Arial, sans-serif;
+                          font-size: 14px;
+                          font-style: normal;
+                          font-weight: 550;
+                          line-height: 18px;
+                        "
+                      >
+                        View this post on Instagram
+                      </div>
+                    </div>
+                    <div style="padding: 12.5% 0"></div>
+                    <div
+                      style="
+                        display: flex;
+                        flex-direction: row;
+                        margin-bottom: 14px;
+                        align-items: center;
+                      "
+                    >
+                      <div>
+                        <div
+                          style="
+                            background-color: #f4f4f4;
+                            border-radius: 50%;
+                            height: 12.5px;
+                            width: 12.5px;
+                            transform: translateX(0px) translateY(7px);
+                          "
+                        ></div>
+                        <div
+                          style="
+                            background-color: #f4f4f4;
+                            height: 12.5px;
+                            transform: rotate(-45deg) translateX(3px)
+                              translateY(1px);
+                            width: 12.5px;
+                            flex-grow: 0;
+                            margin-right: 14px;
+                            margin-left: 2px;
+                          "
+                        ></div>
+                        <div
+                          style="
+                            background-color: #f4f4f4;
+                            border-radius: 50%;
+                            height: 12.5px;
+                            width: 12.5px;
+                            transform: translateX(9px) translateY(-18px);
+                          "
+                        ></div>
+                      </div>
+                      <div style="margin-left: 8px">
+                        <div
+                          style="
+                            background-color: #f4f4f4;
+                            border-radius: 50%;
+                            flex-grow: 0;
+                            height: 20px;
+                            width: 20px;
+                          "
+                        ></div>
+                        <div
+                          style="
+                            width: 0;
+                            height: 0;
+                            border-top: 2px solid transparent;
+                            border-left: 6px solid #f4f4f4;
+                            border-bottom: 2px solid transparent;
+                            transform: translateX(16px) translateY(-4px)
+                              rotate(30deg);
+                          "
+                        ></div>
+                      </div>
+                      <div style="margin-left: auto">
+                        <div
+                          style="
+                            width: 0px;
+                            border-top: 8px solid #f4f4f4;
+                            border-right: 8px solid transparent;
+                            transform: translateY(16px);
+                          "
+                        ></div>
+                        <div
+                          style="
+                            background-color: #f4f4f4;
+                            flex-grow: 0;
+                            height: 12px;
+                            width: 16px;
+                            transform: translateY(-4px);
+                          "
+                        ></div>
+                        <div
+                          style="
+                            width: 0;
+                            height: 0;
+                            border-top: 8px solid #f4f4f4;
+                            border-left: 8px solid transparent;
+                            transform: translateY(-4px) translateX(8px);
+                          "
+                        ></div>
+                      </div>
+                    </div>
+                    <div
+                      style="
+                        display: flex;
+                        flex-direction: column;
+                        flex-grow: 1;
+                        justify-content: center;
+                        margin-bottom: 24px;
+                      "
+                    >
+                      <div
+                        style="
+                          background-color: #f4f4f4;
+                          border-radius: 4px;
+                          flex-grow: 0;
+                          height: 14px;
+                          margin-bottom: 6px;
+                          width: 224px;
+                        "
+                      ></div>
+                      <div
+                        style="
+                          background-color: #f4f4f4;
+                          border-radius: 4px;
+                          flex-grow: 0;
+                          height: 14px;
+                          width: 144px;
+                        "
+                      ></div></div
+                  ></a>
+                  <p
+                    style="
+                      color: #c9c8cd;
+                      font-family: Arial, sans-serif;
+                      font-size: 14px;
+                      line-height: 17px;
+                      margin-bottom: 0;
+                      margin-top: 8px;
+                      overflow: hidden;
+                      padding: 8px 0 7px;
+                      text-align: center;
+                      text-overflow: ellipsis;
+                      white-space: nowrap;
+                    "
+                  >
+                    <a
+                      href="https://www.instagram.com/p/CiR_YoNpUus/?utm_source=ig_embed&amp;utm_campaign=loading"
+                      style="
+                        color: #c9c8cd;
+                        font-family: Arial, sans-serif;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: normal;
+                        line-height: 17px;
+                        text-decoration: none;
+                      "
+                      target="_blank"
+                      >A post shared by toya camel 🇮🇩 (@toya_camel)
+                    </a>
+                  </p>
+                </div>
+              </blockquote>
+              <script src="//www.instagram.com/embed.js"></script>
+            </div>
+            <h3
+              class="mt-5 mb-3 text-xl font-semibold text-dark dark:text-white"
+            ></h3>
+            <p class="text-justify text-base font-medium text-secondary"></p>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- Contact section And -->
 
     <!-- footer Start -->
     <footer class="bg-dark pt-24 pb-12">
-        <div class="container">
-            <div class="flex flex-wrap">
-               <div class="w-full px-4 mb-12 text-slate-300 font-medium md:w-1/3">
-                <h2 class="font-bold text-4xl text-white mb-5">M TOYIB HIDAYAT</h2>
-                <h3 class="font-bold text-2xl mb-2">Hubungi Saya</h3>
-                <p>Kontak 📲 : +62 812 7999 8843 </p>
-                <p>Email 📧 : toya.bikers@gmail.com </p>
-                <p>Alamat  : Jl. Tulung Itik No.25 Gunung Sari <p>Kec.Gunung Sugih Kab. Lampung Tengah</p>
-                <p>Lampung</p>
-               </div> 
-               <div class="w-full px-4 mb-12 md:w-1/3">
-                <h3 class="font-semibold text-xl text-white mb-5">Kategori</h3>
-                <ul class="text-slate-300">
-                    <li>
-                        <a href="#" class="inline-block text-base
-                        hover:text-primary mb-3">Instalasi Jaringan</a>
-                    </li>
-                    <li>
-                        <a href="#" class="inline-block text-base
-                        hover:text-primary mb-3">Desain Grafis</a>
-                    </li>
-                    <li>
-                        <a href="#" class="inline-block text-base
-                        hover:text-primary mb-3">Website</a>
-                    </li>
-                    <li>
-                        <a href="#" class="inline-block text-base
-                        hover:text-primary mb-3">Guru</a>
-                    </li>
-                    <li>
-                        <a href="#" class="inline-block text-base
-                        hover:text-primary mb-3">Olahraga</a>
-                    </li>
-                    <li>
-                        <a href="#" class="inline-block text-base
-                        hover:text-primary mb-3">Privacy Policy</a>
-                    </li>
-                    <li>
-                        <a href="#" class="inline-block text-base
-                        hover:text-primary mb-3">Lowongan Kerja</a>
-                    </li>
-                </ul>
-                 </div>
-                 <div class="w-full px-4 mb-12 md:w-1/3">
-                <h3 class="font-semibold text-xl text-white mb-5">Tautan</h3>
-                <ul class="text-slate-300">
-                    <li>
-                        <a href="#Home" class="inline-block text-base
-                        hover:text-primary mb-3">Beranda</a>
-                    </li>
-                    <li>
-                        <a href="#about" class="inline-block text-base
-                        hover:text-primary mb-3">Tentang</a>
-                    </li>
-                    <li>
-                        <a href="#Portfolio" class="inline-block text-base
-                        hover:text-primary mb-3">Portfolio</a>
-                    </li>
-                    <li>
-                        <a href="#keluarga" class="inline-block text-base
-                        hover:text-primary mb-3">Keluarga</a>
-                    </li>
-                    <li>
-                        <a href="#pendukung" class="inline-block text-base
-                        hover:text-primary mb-3">Pendukung</a>
-                    </li>
-                    <li>
-                        <a href="#blog" class="inline-block text-base
-                        hover:text-primary mb-3">Blog</a>
-                    </li>
-                    <li>
-                        <a href="#contact" class="inline-block text-base
-                        hover:text-primary mb-3">Contact</a>
-                    </li>
-                </ul>
-                
-
-               </div>
-            </div>
-            <div class="w-full pt-10 border-t border-slate-700">
-                <div class="flex items-center justify-center mb-5">
-                    <!-- Youtube -->
-                    <a href="https://youtube.com/@toyabikers" 
-                    target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center 
-                    items-center border border-slate-300 text-slate-300
-                    hover:border-primary hover:bg-primary hover:text-white">
-
-                    
-                    <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>YouTube</title><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-                </a>
-                <!-- Instagram -->
-                <a href="https://Instagram.com/toya_camel"
-                target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center 
-                items-center border border-slate-300 text-slate-300
-                hover:border-primary hover:bg-primary hover:text-white">
-                <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Instagram</title><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/></svg>
-                  </a>
-                <!-- Facebook -->  
-                  <a href="https://Facebook.com/profile.php?id=100089576329053"
-                target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center 
-                items-center border border-slate-300 text-slate-300
-                hover:border-primary hover:bg-primary hover:text-white">
-                <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Facebook</title><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-                   </a>
-                    <!-- Twitter -->  
-                  <a href="https://Twitter.com/toyabikers"
-                  target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center 
-                  items-center border border-slate-300 text-slate-300
-                  hover:border-primary hover:bg-primary hover:text-white">
-                  <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Twitter</title><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
-                    </a>
-                    <!-- Tiktok -->  
-                  <a href="https://Tiktok.com/toyabikers"
-                  target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center 
-                  items-center border border-slate-300 text-slate-300
-                  hover:border-primary hover:bg-primary hover:text-white">
-                  <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>TikTok</title><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
-                   </a>
-                </div>
-                <p class="font-medium text-xs text-slate-500
-                text-center">Dibuat dengan <span class="text-pink-500">❤️</span> 
-                oleh <a href="https://instagram.com/toya_camel" target="_blank" class="font-bold text-primary">M Toyib Hidayat</a>,Team <a href="https://jasakulo.com" target="_blank" class="font-bold text-primary">MTH</a></p>
-
-            </div>
-
+      <div class="container">
+        <div class="flex flex-wrap">
+          <div class="mb-12 w-full px-4 font-medium text-slate-300 md:w-1/3">
+            <h2 class="mb-5 text-4xl font-bold text-white">M TOYIB HIDAYAT</h2>
+            <h3 class="mb-2 text-2xl font-bold">Hubungi Saya</h3>
+            <p>Kontak 📲 : +62 812 7999 8843</p>
+            <p>Email 📧 : toya.bikers@gmail.com</p>
+            <p>Alamat : Jl. Tulung Itik No.25 Gunung Sari</p>
+            <p>Kec.Gunung Sugih Kab. Lampung Tengah</p>
+            <p>Lampung</p>
+          </div>
+          <div class="mb-12 w-full px-4 md:w-1/3">
+            <h3 class="mb-5 text-xl font-semibold text-white">Kategori</h3>
+            <ul class="text-slate-300">
+              <li>
+                <a
+                  href="#"
+                  class="mb-3 inline-block text-base hover:text-primary"
+                  >Instalasi Jaringan</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="mb-3 inline-block text-base hover:text-primary"
+                  >Desain Grafis</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="mb-3 inline-block text-base hover:text-primary"
+                  >Website</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="mb-3 inline-block text-base hover:text-primary"
+                  >Guru</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="mb-3 inline-block text-base hover:text-primary"
+                  >Olahraga</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="mb-3 inline-block text-base hover:text-primary"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="mb-3 inline-block text-base hover:text-primary"
+                  >Lowongan Kerja</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="mb-12 w-full px-4 md:w-1/3">
+            <h3 class="mb-5 text-xl font-semibold text-white">Tautan</h3>
+            <ul class="text-slate-300">
+              <li>
+                <a
+                  href="#Home"
+                  class="mb-3 inline-block text-base hover:text-primary"
+                  >Beranda</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#about"
+                  class="mb-3 inline-block text-base hover:text-primary"
+                  >Tentang</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#Portfolio"
+                  class="mb-3 inline-block text-base hover:text-primary"
+                  >Portfolio</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#keluarga"
+                  class="mb-3 inline-block text-base hover:text-primary"
+                  >Keluarga</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#pendukung"
+                  class="mb-3 inline-block text-base hover:text-primary"
+                  >Pendukung</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#blog"
+                  class="mb-3 inline-block text-base hover:text-primary"
+                  >Blog</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  class="mb-3 inline-block text-base hover:text-primary"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
-
+        <div class="w-full border-t border-slate-700 pt-10">
+          <div class="mb-5 flex items-center justify-center">
+            <!-- Youtube -->
+            <a
+              href="https://youtube.com/@toyabikers"
+              target="_blank"
+              class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+            >
+              <svg
+                role="img"
+                width="20"
+                class="fill-current"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>YouTube</title>
+                <path
+                  d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+                />
+              </svg>
+            </a>
+            <!-- Instagram -->
+            <a
+              href="https://Instagram.com/toya_camel"
+              target="_blank"
+              class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+            >
+              <svg
+                role="img"
+                width="20"
+                class="fill-current"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>Instagram</title>
+                <path
+                  d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"
+                />
+              </svg>
+            </a>
+            <!-- Facebook -->
+            <a
+              href="https://Facebook.com/profile.php?id=100089576329053"
+              target="_blank"
+              class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+            >
+              <svg
+                role="img"
+                width="20"
+                class="fill-current"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>Facebook</title>
+                <path
+                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                />
+              </svg>
+            </a>
+            <!-- Twitter -->
+            <a
+              href="https://Twitter.com/toyabikers"
+              target="_blank"
+              class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+            >
+              <svg
+                role="img"
+                width="20"
+                class="fill-current"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>Twitter</title>
+                <path
+                  d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"
+                />
+              </svg>
+            </a>
+            <!-- Tiktok -->
+            <a
+              href="https://Tiktok.com/toyabikers"
+              target="_blank"
+              class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+            >
+              <svg
+                role="img"
+                width="20"
+                class="fill-current"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>TikTok</title>
+                <path
+                  d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"
+                />
+              </svg>
+            </a>
+          </div>
+          <p class="text-center text-xs font-medium text-slate-500">
+            Dibuat dengan <span class="text-pink-500">❤️</span> oleh
+            <a
+              href="https://instagram.com/toya_camel"
+              target="_blank"
+              class="font-bold text-primary"
+              >M Toyib Hidayat</a
+            >,Team
+            <a
+              href="https://jasakulo.com"
+              target="_blank"
+              class="font-bold text-primary"
+              >MTH</a
+            >
+          </p>
+        </div>
+      </div>
     </footer>
-       <!-- footer And -->
+    <!-- footer And -->
 
-       <!-- whatshapp Start -->
-        <a href="https://wa.me/+6281279998843" class="fixed transition duration-300
-        items-center bottom-4 right-4 -z[9999]  h-14 w-14 bg-slate-sm rounded-full p-5 hover:animate-pulse" target="_blank" id="whatsapp button">
-        <img  src="./dist/img/wa.svg"alt="Chat via WhatsApp">
-        </a>
-       <!-- whatshapp And -->
+    <!-- whatshapp Start -->
+    <a
+      href="https://wa.me/+6281279998843"
+      class="-z[9999] bg-slate-sm fixed bottom-4 right-4 h-14 w-14 items-center rounded-full p-5 transition duration-300 hover:animate-pulse"
+      target="_blank"
+      id="whatsapp button"
+    >
+      <img src="./dist/img/wa.svg" alt="Chat via WhatsApp" />
+    </a>
+    <!-- whatshapp And -->
 
-       <!-- Back To Top Start -->
-       <a href="#Home" class="fixed hidden justify-center 
-       items-center bottom-4 right-0 z-[9999] block h-5 w-10 bg-slate-50 rounded-full p-4 hover:animate-pulse " id="to-top">
-        <span class="block h-4 w-4 border-t-2 border-l-2 rotate-45 mt-2"></span>
-       </a>
-       <!-- Back To Top And -->
+    <!-- Back To Top Start -->
+    <a
+      href="#Home"
+      class="fixed bottom-4 right-0 z-[9999] block hidden h-5 w-10 items-center justify-center rounded-full bg-slate-50 p-4 hover:animate-pulse"
+      id="to-top"
+    >
+      <span class="mt-2 block h-4 w-4 rotate-45 border-t-2 border-l-2"></span>
+    </a>
+    <!-- Back To Top And -->
 
-<script src="dist/js/script.js"></script>
-<script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbx-FG0cQryzeyx6dUov0MykKeEOa1RaV8hTRbTgVYy5juBcIQqvg0WS0Nfcd1el043x/exec'
-    const form = document.forms['submit-to-google-sheet']
-  
-    form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => console.log('Success!', response))
-        .catch(error => console.error('Error!', error.message))
-    })
-  </script>
-  <!-- AOS -->
+    <script src="dist/js/script.js"></script>
+    <script>
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbx-FG0cQryzeyx6dUov0MykKeEOa1RaV8hTRbTgVYy5juBcIQqvg0WS0Nfcd1el043x/exec";
+      const form = document.forms["submit-to-google-sheet"];
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => console.log("Success!", response))
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
+    <!-- AOS -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init();
     </script>
-
-</body>
+  </body>
 </html>
